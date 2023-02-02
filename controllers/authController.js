@@ -161,7 +161,7 @@ const forgotPassword = async (req, res) => {
       origin,
     });
 
-    const tenMinutes = 100 * 60 * 10;
+    const tenMinutes = 1000 * 60 * 10;
     const passwordTokenExpirationDate = new Date(Date.now() + tenMinutes);
 
     user.passwordToken = createHash(passwordToken);
